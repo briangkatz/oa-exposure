@@ -5,8 +5,8 @@
     <title>OA Exposure Projections</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
     <style>
         body { margin:0; padding:0; }
         #map { position:absolute; top:0; bottom:0; width:100%; }
@@ -58,7 +58,8 @@
 
 <div class='map-overlay top'>
     <div class='map-overlay-inner'>
-        <h2>Projected OA Extremes from 1995-2050</h2>
+        <h2>When and where is ocean acidification most extreme in the Pacific Northwest?</h2>
+        <h3>Projected OA Extremes from 1995-2050</h3>
         <label id='month'></label>
         <input id='slider' type='range' min='0' max='11' step='1' value='0' />
     </div>
@@ -76,7 +77,7 @@
     mapboxgl.accessToken = 'pk.eyJ1Ijoia2F0emJyIiwiYSI6ImNqOHhmMnBucDIwZm4ycW8ya2d5cHF0cmsifQ.8rcjz0DyWs_ncWfOZ0VwKA';
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/katzbr/cjhjswhw70lsn2snxzmjjn4z6',
+        style: 'mapbox://styles/katzbr/cjshza9xf1db51fqgpriounjs',
         center: [-123, 44],
         zoom: 6,
         minZoom: 6,
@@ -169,14 +170,6 @@
 
     map.on('load', function() {
 
-        // Data courtesy of http://earthquake.usgs.gov/
-        // Query for significant earthquakes in 2015 URL request looked like this:
-        // http://earthquake.usgs.gov/fdsnws/event/1/query
-        //    ?format=geojson
-        //    &starttime=2015-01-01
-        //    &endtime=2015-12-31
-        //    &minmagnitude=6'
-        //
         // Here we're using d3 to help us make the ajax request but you can use
         // Any request method (library or otherwise) you wish.
         d3.json('assets/corrosive.geojson', function(err, data) {
