@@ -17,6 +17,25 @@ body {
     top: 0;
     left: 0;
     padding: 10px;
+    width: 30vw;
+}
+
+@media screen and (max-width: 600px) {
+  .map-overlay {
+      width: 40vw;
+  }
+  h4 {
+      font-size: 5vw;
+  }
+  h5 {
+      font-size: 4vw;
+  }
+  h6 {
+      font-size: 3vw;
+  }
+  .subtext {
+      font-size: 3vw;
+  }
 }
 
 .map-overlay .map-overlay-inner {

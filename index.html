@@ -14,23 +14,26 @@
 
 <div id='map'></div>
 
-<div class='map-overlay top'>
+<div class='map-overlay top container'>
     <div class='map-overlay-inner'>
         <h4>When and where is ocean acidification most extreme in the Pacific Northwest?</h4>
         <h5>Projected OA Extremes from 1995-2050</h5>
-        <h5>(Model: <a href="https://www.biogeosciences.net/10/193/2013/bg-10-193-2013.pdf" target="_blank">Hauri, et al. 2013</a>)</h5>
+        <h6>Model: <a href="https://www.biogeosciences.net/10/193/2013/bg-10-193-2013.pdf" target="_blank">Hauri, et al. 2013</a></h6>
         <label id='month'></label>
         <input id='slider' type='range' min='0' max='11' step='1' value='0' />
     </div>
-    <div class='map-overlay-inner'>
-        <div id='legend' class='legend container h-100'>
+    <div class='map-overlay-inner container-fluid'>
+        <div id='legend' class='legend'>
             <div class="row align-items-center">
-                <div class="col-sm-2 col-md-2 col-lg-2"><small>&Omega;<sub>ar</sub> 1.40</small></div>
-                <div class="col-sm-8 col-md-8 col-lg-8"><div class='bar'></div></div>
-                <div class="col-sm-2 col-md-2 col-lg-2"><small>&Omega;<sub>ar</sub> 0.75</small></div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><div class='bar'></div></div>
             </div>
-            <div>Aragonite saturation state (&Omega;<sub>ar</sub>) <=1.4: stressful to shellfish growth</div>
-            <div>Aragonite saturation state (&Omega;<sub>ar</sub>) < 1.0: corrosive to shell-building</div>
+            <div class="row">
+                <div class="col text-left"><small>&Omega;<sub>ar</sub> 1.40</small></div>
+                <div class="col text-right"><small>&Omega;<sub>ar</sub> 0.75</small></div>
+            </div>
+            <hr>
+            <div class="subtext">Aragonite saturation state (&Omega;<sub>ar</sub>) <=1.4: stressful to shellfish growth</div>
+            <div class="subtext">Aragonite saturation state (&Omega;<sub>ar</sub>) < 1.0: corrosive to shell-building</div>
         </div>
     </div>
 </div>
